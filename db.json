@@ -1,0 +1,48 @@
+{
+    "produtos":[
+        {
+            "id": "1",
+            "nome": "Arroz",
+            "preco": 7.50,
+            "img": "IMAGEM"
+        },
+        {
+            "id": "2",
+            "nome": "FEIJÃO",
+            "preco": 9,
+            "img": "IMAGEM"
+        },
+        {
+            "id": "3",
+            "nome": "macarrao",
+            "preco": 5,
+            "img": "IMAGEM"
+        },
+        {
+            "id": "4",
+            "nome": "miojo",
+            "preco": 1.50,
+            "img": "IMAGEM"
+        }
+    ],
+
+    "cliente":[
+        {
+            "id": 1,
+            "nome": "andre",
+            "endereco": "tal e tal e tal"
+        }
+    ],
+
+    "carrinho": [
+        
+    ],
+
+    "pedidos": [
+
+    ],
+
+    "finalizados":[
+        
+    ]
+}
