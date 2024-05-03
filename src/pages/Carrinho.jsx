@@ -14,7 +14,7 @@ function Carrinho() {
         const buscarDados = async () => {
             try{
                 ///fetch como requisição get
-                const response = await fetch("http://192.168.100.231:5000/carrinho", {
+                const response = await fetch("http://localhost:5000/carrinho", {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ function Carrinho() {
             setDados(carrinho); //atualiza o estado dos dados para a nova array carrinho, que só vai ter os dados que nao foram apagados
 
             try{
-                const response = await fetch(`http://192.168.100.231:5000/carrinho/${id}`, { ///dá o fetch no id específico
+                const response = await fetch(`http://localhost:5000/carrinho/${id}`, { ///dá o fetch no id específico
                     method: "DELETE", ///método de deletar
                     headers: {
                         "Content-Type": "application/json"

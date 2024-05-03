@@ -1,0 +1,94 @@
+@import "./root.module.css";
+
+.nav{
+    display: flex;
+    padding: 0 3em 0 3em;
+    background-color: var(--principal);
+    align-items: center;
+    position: relative;
+}
+
+.nav div{
+    width: 50%;
+}
+
+.nav div img{
+    width: 140px;
+}
+
+.nav label, input, .carrinho{
+    display: none;
+}
+
+.navigation{
+    display: flex;
+    justify-content: right;
+}
+
+.navigation ul{
+    display: flex;
+    list-style: none;
+    justify-content: right;
+}
+
+.navigation ul li{
+    margin: 0 20px 0 20px;
+}
+
+.navigation ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.navigation ul li a:hover{
+    text-decoration: underline;
+}
+
+.navigation ul li svg{
+    font-size: 22px;
+}
+
+
+.barra{
+    background-color: var(--principal);
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vmin;
+}
+
+.barra ul{
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media(max-width: 700px){
+    .navigation{
+        display: none;
+    }
+
+    .nav label{
+        display: flex;
+        position: absolute;
+        right: 0;
+        padding-right: 1em;
+        color: #fff;
+        font-size: 30px;
+    }
+
+    .carrinho{
+        display: flex;
+        position: absolute;
+        right: 0;
+        padding-right: 3em;
+        color: #fff;
+        font-size: 30px;
+    }
+
+    input[type=checkbox]:checked ~ .barra{
+        display: flex;
+        height: 100vmax;
+    }
+}

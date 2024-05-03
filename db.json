@@ -31,27 +31,12 @@
   ],
   "cliente": [
     {
-      "id": 1,
+      "id": "1",
       "nome": "andre",
       "endereco": "tal e tal e tal"
     }
   ],
-  "carrinho": [
-    {
-      "id": "1",
-      "nome": "Arroz",
-      "preco": 7.5,
-      "quantidade": 1,
-      "img": "./logo.jpeg"
-    },
-    {
-      "id": "2",
-      "nome": "FEIJÃO",
-      "preco": 9,
-      "quantidade": 1,
-      "img": "./logo.jpeg"
-    }
-  ],
+  "carrinho": [],
   "pedidos": [],
   "finalizados": []
 }
