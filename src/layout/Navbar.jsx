@@ -17,8 +17,7 @@ function Navbar(){
             <label htmlFor="ver"><FaBars /></label>
 
             <div className={styles.navigation}>
-                
-
+                <label htmlFor="ver"><FaBars /></label>
                 <ul>
                     <li><Link to="/">Início</Link></li>
 
@@ -26,20 +25,7 @@ function Navbar(){
 
                     <li><Link to="/pedidos">Pedidos</Link></li>
 
-                    <li><Link to="/carrinho"><FaCartPlus /></Link></li>
-                </ul>
-            </div>
-
-            <div className={styles.barra}>
-                <label htmlFor="ver"> &equiv;</label>
-                <ul>
-                    <li><Link to="/">Início</Link></li>
-
-                    <li><Link to="/produtos">Produtos</Link></li>
-
-                    <li><Link to="/pedidos">Pedidos</Link></li>
-
-                    <li><Link to="/carrinho">Seu carrinho</Link></li>
+                    <li><Link to="/carrinho"><span>Seu carrinho</span><FaCartPlus /></Link></li>
                 </ul>
             </div>
         </nav>

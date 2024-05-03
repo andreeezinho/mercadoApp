@@ -13,7 +13,7 @@
 }
 
 .nav div img{
-    width: 140px;
+    width: 120px;
 }
 
 .nav label, input, .carrinho{
@@ -40,6 +40,10 @@
     color: #fff;
 }
 
+.navigation ul li a span{
+    display: none;
+}
+
 .navigation ul li a:hover{
     text-decoration: underline;
 }
@@ -48,25 +52,35 @@
     font-size: 22px;
 }
 
-
-.barra{
-    background-color: var(--principal);
-    display: none;
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100vmin;
-}
-
-.barra ul{
-    display: flex;
-    flex-direction: column;
-}
-
-
 @media(max-width: 700px){
+    .nav{
+        padding: 0 1.5em 0 1.5em;
+    }
+
+    .nav div img{
+        width: 80px;
+    }
+
     .navigation{
+        box-shadow: -1px 0 10px #102672;
+        background-color: var(--principal);
         display: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vmin;
+        justify-content: left;
+        border-top-left-radius: 20px;
+    }
+    
+    .navigation ul{
+        display: flex;
+        flex-direction: column;
+        margin-top: 60px;
+    }
+
+    .navigation ul li{
+        margin: 15px 0 15px;
     }
 
     .nav label{
@@ -75,7 +89,21 @@
         right: 0;
         padding-right: 1em;
         color: #fff;
-        font-size: 30px;
+        font-size: 18px;
+    }
+
+    .navigation label{
+        left: 0;
+        padding: 0.7em;
+        font-size: 22px;
+    }
+
+    .navigation ul li a span{
+        display: flex;
+    }
+
+    .navigation ul li a svg{
+        display: none;
     }
 
     .carrinho{
@@ -84,10 +112,10 @@
         right: 0;
         padding-right: 3em;
         color: #fff;
-        font-size: 30px;
+        font-size: 18px;
     }
 
-    input[type=checkbox]:checked ~ .barra{
+    input[type=checkbox]:checked ~ .navigation{
         display: flex;
         height: 100vmax;
     }
