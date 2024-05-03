@@ -3,9 +3,11 @@
 .footer{
     background-color: var(--fundo-footer);
     display: flex;
-    width: 100vw;
     margin: 0 auto;
     flex-wrap: wrap;
-    position: absolute;
-    bottom: 0;
+    color: var(--fundo);
+}
+
+.footer ul{
+    
 }

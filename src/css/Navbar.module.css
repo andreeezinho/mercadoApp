@@ -68,7 +68,7 @@
         position: absolute;
         right: 0;
         top: 0;
-        height: 100vmin;
+        height: 100vh;
         justify-content: left;
         border-top-left-radius: 20px;
     }

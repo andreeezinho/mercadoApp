@@ -9,7 +9,9 @@ function Navbar(){
     return(
         <nav className={styles.nav}>
             <div>
-                <img src={img} alt="Logo" />
+                <Link to="/">
+                    <img src={img} alt="Logo" />    
+                </Link>
             </div>
 
             <Link to="/carrinho" className={styles.carrinho}><FaCartPlus /></Link>
