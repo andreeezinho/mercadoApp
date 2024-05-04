@@ -36,7 +36,15 @@
       "endereco": "tal e tal e tal"
     }
   ],
-  "carrinho": [],
+  "carrinho": [
+    {
+      "id": "2",
+      "nome": "FEIJÃO",
+      "preco": 9,
+      "quantidade": 1,
+      "img": "./logo.jpeg"
+    }
+  ],
   "pedidos": [],
   "finalizados": []
 }

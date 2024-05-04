@@ -36,6 +36,7 @@
 }
 
 .navigation ul li a{
+    font-size: 22px;
     text-decoration: none;
     color: #fff;
 }
@@ -52,7 +53,7 @@
     font-size: 22px;
 }
 
-@media(max-width: 700px){
+@media(max-width: 900px){
     .nav{
         padding: 0 1.5em 0 1.5em;
     }
@@ -77,6 +78,7 @@
         display: flex;
         flex-direction: column;
         margin-top: 60px;
+        height: 100vh
     }
 
     .navigation ul li{
@@ -96,6 +98,10 @@
         left: 0;
         padding: 0.7em;
         font-size: 22px;
+    }
+
+    .navigation ul li a{
+        font-size: 14px;
     }
 
     .navigation ul li a span{

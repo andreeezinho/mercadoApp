@@ -6,6 +6,8 @@ import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
+import { FaInfo } from "react-icons/fa";
+
 
 var facebook = "https://www.facebook.com/p/Comercial-Stephane-100080010133353/";
 var instagram = "https://www.instagram.com/comercialstephane";
@@ -16,8 +18,8 @@ function Footer() {
             <div className={styles.navigation}>
                 <ul>
                     <span>Contatos</span>
-                    <li><FaPhone /> 75 3272-1985</li>
-                    <li><FaWhatsapp /> 75 9124-2421</li>
+                    <li><FaPhone /><a href="###">75 3272-1985</a></li>
+                    <li><FaWhatsapp /><a href="###">75 9124-2421</a></li>
                 </ul>
                 
                 <ul>
@@ -34,12 +36,17 @@ function Footer() {
 
                 <ul>
                     <span>Nossa Empresa</span>
-                    <li><Link to="/sobrenos">Sobre Nós</Link></li>
+                    <li>
+                        <FaInfo />
+                        <Link to="/sobrenos">Sobre Nós</Link>
+                    </li>
                 </ul>
             </div>
 
             <div className={styles.copy}>
-
+                <p>Comercial Stephane LTDA</p>
+                <p><span>&copy;</span>Copyright by <span>andreeezinho</span></p>
+                <p>Tucano, BA - 2024</p>
             </div>
         </div>
     )
