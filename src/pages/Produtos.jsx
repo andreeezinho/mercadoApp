@@ -1,5 +1,9 @@
 import {useState, useEffect} from "react";
 
+import styles from "../css/Produtos.module.css";
+
+import {FaShoppingBasket} from "react-icons/fa";
+
 function Produtos() {
     ///estado para armazenar os dados recebidos
     const [dados, setDados] = useState([]);
@@ -67,22 +71,32 @@ function Produtos() {
 
     return(
 
-        <div>
+        <div className={styles.container}>
+            <div className={styles.texto}>
+                <p>Adicione produtos no seu carrinho!</p>
+                <FaShoppingBasket />
+            </div>
+
             {  
             ///renderiza os dados se tiver um ou mais
             dados.length > 0 ? (
                 dados.map((produto, index) => (
-                    <div key={index}>
-                        <img src={produto.img} alt="img" />
-                        <p>{produto.nome}</p>
-                        <p>{produto.preco}</p>
-                        <button onClick={() => enviarParaCarrinho(produto)}>add</button>
-                    </div>
+
+                    // se categoria do produto for alimentos, gera a diva só de aliemtos
+                    produto.categoria === "alimentos" ? (
+                        <div key={index} className={styles.alimentosDiv}>
+                            <img src={produto.img} alt="img" />
+                            <p>{produto.nome}</p>
+                            <p>{produto.preco}</p>
+                            <button onClick={() => enviarParaCarrinho(produto)}>add</button>
+                        </div>
+                    ):(<p>nao achei</p>)
                 ))
             ) : (
                 ///mensagem se nao tiver nada para exibir
                 <p>Produtos não registrados :/</p>
-        )}</div>
+            )}
+        </div>
     )
 }
 

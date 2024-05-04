@@ -4,29 +4,36 @@
       "id": "1",
       "nome": "Arroz",
       "preco": 7.5,
-      "quantidade": 1,
-      "img": "./logo.jpeg"
+      "img": "./logo.jpeg",
+      "categoria": "alimentos"
     },
     {
       "id": "2",
       "nome": "FEIJÃO",
       "preco": 9,
-      "quantidade": 1,
-      "img": "./logo.jpeg"
+      "img": "./logo.jpeg",
+      "categoria": "alimentos"
     },
     {
       "id": "3",
       "nome": "macarrao",
       "preco": 5,
-      "quantidade": 1,
-      "img": "./logo.jpeg"
+      "img": "./logo.jpeg",
+      "categoria": "alimentos"
     },
     {
       "id": "4",
       "nome": "miojo",
       "preco": 1.5,
-      "quantidade": 1,
-      "img": "./src/img/logo.jpeg"
+      "img": "./src/img/logo.jpeg",
+      "categoria": "alimentos"
+    },
+    {
+      "id": "5",
+      "nome": "bosta",
+      "preco": 1.5,
+      "img": "./src/img/logo.jpeg",
+      "categoria": "alimentos"
     }
   ],
   "cliente": [
@@ -36,15 +43,7 @@
       "endereco": "tal e tal e tal"
     }
   ],
-  "carrinho": [
-    {
-      "id": "2",
-      "nome": "FEIJÃO",
-      "preco": 9,
-      "quantidade": 1,
-      "img": "./logo.jpeg"
-    }
-  ],
+  "carrinho": [],
   "pedidos": [],
   "finalizados": []
 }

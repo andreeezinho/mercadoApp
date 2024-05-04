@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 
 import styles from "../css/Footer.module.css";
 
+import img from "../img/logoNav.png";
+
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa";
@@ -15,6 +17,10 @@ var instagram = "https://www.instagram.com/comercialstephane";
 function Footer() {
     return(
         <div className={styles.footer}>
+            <div className={styles.logo}>
+                <img src={img} alt="Logo" />
+            </div>
+
             <div className={styles.navigation}>
                 <ul>
                     <span>Contatos</span>
@@ -45,7 +51,7 @@ function Footer() {
 
             <div className={styles.copy}>
                 <p>Comercial Stephane LTDA</p>
-                <p><span>&copy;</span>Copyright by <span>andreeezinho</span></p>
+                <p><span>&copy;</span>Copyright by <span>andreeezinho</span>, todos os direitos reservados.</p>
                 <p>Tucano, BA - 2024</p>
             </div>
         </div>

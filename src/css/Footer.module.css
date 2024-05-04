@@ -3,10 +3,19 @@
 .footer{
     background-color: var(--fundo-footer);
     width: 100%;
-    padding: 5em 0 3em 0;
+    padding: 3em 0 3em 0;
     margin: 0 auto;
     flex-wrap: wrap;
     color: var(--fundo);
+}
+
+.logo{
+    position: absolute;
+}
+
+.logo img{
+    width: 140px;
+    padding-left: 3em;
 }
 
 .navigation{
@@ -22,7 +31,7 @@
 }
 
 .navigation ul span{
-    font-size: 22px;
+    font-size: 18px;
     color: var(--secundaria);
     font-weight: bolder;
 }
@@ -32,12 +41,12 @@
 }
 
 .navigation ul li svg{
-    font-size: 30px;
+    font-size: 24px;
 }
 
 .navigation ul li a{
     margin-left: 10px;
-    font-size: 18px;
+    font-size: 16px;
     vertical-align: super;
     text-decoration: none;
     color: var(--fundo);
@@ -52,11 +61,17 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    font-size: 12px;
 }
 
 @media(max-width: 900px){
+    .logo img{
+        display: none;
+    }
+
     .navigation{
         flex-flow: wrap;
+        padding-top: 2em;
     }
 
     .navigation ul{
