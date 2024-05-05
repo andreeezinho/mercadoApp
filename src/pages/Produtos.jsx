@@ -77,25 +77,51 @@ function Produtos() {
                 <FaShoppingBasket />
             </div>
 
-            {  
-            ///renderiza os dados se tiver um ou mais
-            dados.length > 0 ? (
-                dados.map((produto, index) => (
+            <div className={styles.alimentosContainer}>
+                <div><h1>ALIMENTOS</h1></div>
 
-                    // se categoria do produto for alimentos, gera a diva só de aliemtos
-                    produto.categoria === "alimentos" ? (
-                        <div key={index} className={styles.alimentosDiv}>
-                            <img src={produto.img} alt="img" />
-                            <p>{produto.nome}</p>
-                            <p>{produto.preco}</p>
-                            <button onClick={() => enviarParaCarrinho(produto)}>add</button>
-                        </div>
-                    ):(<p>nao achei</p>)
-                ))
-            ) : (
-                ///mensagem se nao tiver nada para exibir
-                <p>Produtos não registrados :/</p>
-            )}
+                {  
+                ///renderiza os dados se tiver um ou mais
+                dados.length > 0 ? (
+                    dados.map((alimentos, indexAlimentos) => (
+
+                        // se categoria do produto for alimentos, gera a diva só de aliemtos
+                        alimentos.categoria === "alimentos" ? (
+                            <div key={indexAlimentos} className={styles.alimentosDiv}>
+                                <img src={alimentos.img} alt="img" />
+                                <p>{alimentos.nome}</p>
+                                <p>{alimentos.preco}</p>
+                                <button onClick={() => enviarParaCarrinho(alimentos)}>add</button>
+                            </div>
+                        ):(<></>)
+                    ))
+                ) : (
+                    ///mensagem se nao tiver nada para exibir
+                    <p>Produtos não registrados :/</p>
+                )}
+            </div>
+
+            <div className={styles.higieneContainer}>
+                <div><h1>HIGIENE</h1></div>
+
+                {  
+                ///renderiza os dados se tiver um ou mais
+                dados.length > 0 ? (
+                    dados.map((higiene, indexHigiene) => (
+
+                        // se categoria do produto for alimentos, gera a diva só de aliemtos
+                        higiene.categoria === "higiene" ? (
+                            <div key={indexHigiene} className={styles.higieneDiv}>
+                                <img src={higiene.img} alt="img" />
+                                <p>{higiene.nome}</p>
+                                <p>{higiene.preco}</p>
+                                <button onClick={() => enviarParaCarrinho(higiene)}>add</button>
+                            </div>
+                        ):(<></>)
+                    ))
+                ) : (<></>)
+                }
+            </div>
         </div>
     )
 }

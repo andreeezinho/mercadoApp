@@ -34,6 +34,27 @@
       "preco": 1.5,
       "img": "./src/img/logo.jpeg",
       "categoria": "alimentos"
+    },
+    {
+      "id": "6",
+      "nome": "papel-higienico",
+      "preco": 1.75,
+      "img": "./src/img/logo.jpeg",
+      "categoria": "higiene"
+    },
+    {
+      "id": "7",
+      "nome": "sabonete",
+      "preco": 2.50,
+      "img": "./src/img/logo.jpeg",
+      "categoria": "higiene"
+    },
+    {
+      "id": "8",
+      "nome": "sabonete líquido",
+      "preco": 1.5,
+      "img": "./src/img/logo.jpeg",
+      "categoria": "higiene"
     }
   ],
   "cliente": [
