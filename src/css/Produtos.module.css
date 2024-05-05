@@ -1,0 +1,126 @@
+@import "./root.module.css";
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.texto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1em 0 1em 0;
+}
+
+.texto p{
+    font-size: 20px;
+    color: var(--principal);
+    font-weight: bolder;
+}
+
+.texto svg{
+    font-size: 28px;
+    margin-right: 10px;
+    color: var(--principal);
+}
+
+.navCategoria{
+    display: flex;
+    width: 100%;
+    background-color: var(--principal);
+    margin-bottom: 80px;
+}
+
+.navCategoria ul{
+    padding: 0;
+    display: flex;
+    list-style: none;
+    margin: 0 auto;
+}
+
+.navCategoria ul li{
+    padding: 1em 0 1em 0;
+    width: 170px;
+    border: 1px solid #fff;
+    border-bottom: none;
+    border-top: none;
+    text-align: center;
+}
+
+.navCategoria ul li:hover{
+    background-color: var(--secundaria);
+}
+
+.navCategoria ul li a{
+    font-weight: bolder;
+    text-decoration: none;
+    color: #fff;
+}
+
+.containerProdutos{
+    display: flex;
+    flex-direction: column;
+}
+
+.categoria{
+    background-color: #eeeef1;
+}
+
+.categoria h1{
+    color: var(--principal);
+    margin-left: 1em;
+}
+
+.containerCards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 2em 0 2em 0;
+    margin: 0 auto;
+}
+
+.cardDiv{
+    width: 250px;
+    height: 300px;
+    border: 1px solid #eeeef1;
+    position: relative;
+}
+
+.cardDiv div{
+    width: 97%;
+    height: 50%;
+    background-color: #eeeef1;
+    margin: 10px auto; 
+    margin-bottom: 20px;
+}
+
+.cardDiv div img{
+    width: 100%;
+}
+
+.cardDiv p{
+    width: 97%;
+    height: auto;
+    background-color: #eeeef1;
+    margin: 10px auto;
+}
+
+.cardDiv button{
+    position: absolute;
+    bottom: 10px;
+    left: 1%;
+    margin: 0 auto;
+    background-color: var(--principal);
+    width: 90px;
+    height: 40px;
+    color: var(--fundo);
+    border: none;
+}
+
+.cardDiv button:hover{
+    background-color: var(--secundaria);
+    font-weight: bolder;
+}
