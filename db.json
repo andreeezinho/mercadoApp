@@ -4,7 +4,7 @@
       "id": "1",
       "nome": "Arroz",
       "preco": 7.5,
-      "img": "./logo.jpeg",
+      "img": "https://gbarbosa.vtexassets.com/arquivos/ids/210975-118-118?v=638354957020530000&width=118&height=118&aspect=true",
       "categoria": "alimentos"
     },
     {
@@ -16,7 +16,7 @@
     },
     {
       "id": "3",
-      "nome": "macarrao",
+      "nome": "macarrão",
       "preco": 5,
       "img": "./logo.jpeg",
       "categoria": "alimentos"
@@ -30,31 +30,213 @@
     },
     {
       "id": "5",
-      "nome": "bosta",
-      "preco": 1.5,
-      "img": "./src/img/logo.jpeg",
+      "nome": "feijão preto",
+      "preco": 8,
+      "img": "./logo.jpeg",
       "categoria": "alimentos"
     },
     {
       "id": "6",
-      "nome": "papel-higienico",
+      "nome": "macarrão integral",
+      "preco": 6,
+      "img": "./logo.jpeg",
+      "categoria": "alimentos"
+    },
+    {
+      "id": "7",
+      "nome": "carne bovina",
+      "preco": 15,
+      "img": "./src/img/logo.jpeg",
+      "categoria": "alimentos"
+    },
+    {
+      "id": "8",
+      "nome": "frango",
+      "preco": 10,
+      "img": "./src/img/logo.jpeg",
+      "categoria": "alimentos"
+    },
+    {
+      "id": "9",
+      "nome": "peixe",
+      "preco": 12,
+      "img": "./src/img/logo.jpeg",
+      "categoria": "alimentos"
+    },
+    {
+      "id": "10",
+      "nome": "feijão carioca",
+      "preco": 7,
+      "img": "./logo.jpeg",
+      "categoria": "alimentos"
+    },
+    {
+      "id": "11",
+      "nome": "sabonete",
+      "preco": 2.5,
+      "img": "./src/img/logo.jpeg",
+      "categoria": "higiene"
+    },
+    {
+      "id": "12",
+      "nome": "shampoo",
+      "preco": 3.5,
+      "img": "./src/img/logo.jpeg",
+      "categoria": "higiene"
+    },
+    {
+      "id": "13",
+      "nome": "papel-toalha",
+      "preco": 2.75,
+      "img": "./src/img/logo.jpeg",
+      "categoria": "higiene"
+    },
+    {
+      "id": "14",
+      "nome": "sabonete líquido",
+      "preco": 1.5,
+      "img": "./src/img/logo.jpeg",
+      "categoria": "higiene"
+    },
+    {
+      "id": "15",
+      "nome": "desinfetante",
+      "preco": 3,
+      "img": "./src/img/logo.jpeg",
+      "categoria": "higiene"
+    },
+    {
+      "id": "16",
+      "nome": "escova de dentes",
+      "preco": 2,
+      "img": "./src/img/logo.jpeg",
+      "categoria": "higiene"
+    },
+    {
+      "id": "17",
+      "nome": "pasta de dente",
+      "preco": 2.25,
+      "img": "./src/img/logo.jpeg",
+      "categoria": "higiene"
+    },
+    {
+      "id": "18",
+      "nome": "papel-higiênico",
       "preco": 1.75,
       "img": "./src/img/logo.jpeg",
       "categoria": "higiene"
     },
     {
-      "id": "7",
-      "nome": "sabonete",
-      "preco": 2.50,
+      "id": "19",
+      "nome": "desodorante",
+      "preco": 4,
       "img": "./src/img/logo.jpeg",
       "categoria": "higiene"
     },
     {
-      "id": "8",
-      "nome": "sabonete líquido",
-      "preco": 1.5,
+      "id": "20",
+      "nome": "carne suína",
+      "preco": 14,
       "img": "./src/img/logo.jpeg",
-      "categoria": "higiene"
+      "categoria": "açougue"
+    },
+    {
+      "id": "21",
+      "nome": "linguiça",
+      "preco": 9,
+      "img": "./src/img/logo.jpeg",
+      "categoria": "açougue"
+    },
+    {
+      "id": "22",
+      "nome": "picanha",
+      "preco": 20,
+      "img": "./src/img/logo.jpeg",
+      "categoria": "açougue"
+    },
+    {
+      "id": "23",
+      "nome": "salame",
+      "preco": 7,
+      "img": "./src/img/logo.jpeg",
+      "categoria": "açougue"
+    },
+    {
+      "id": "24",
+      "nome": "presunto",
+      "preco": 8,
+      "img": "./src/img/logo.jpeg",
+      "categoria": "açougue"
+    },
+    {
+      "id": "25",
+      "nome": "abacaxi",
+      "preco": 5,
+      "img": "./src/img/logo.jpeg",
+      "categoria": "hortifruti"
+    },
+    {
+      "id": "26",
+      "nome": "morango",
+      "preco": 6,
+      "img": "./src/img/logo.jpeg",
+      "categoria": "hortifruti"
+    },
+    {
+      "id": "27",
+      "nome": "kiwi",
+      "preco": 4,
+      "img": "./src/img/logo.jpeg",
+      "categoria": "hortifruti"
+    },
+    {
+      "id": "28",
+      "nome": "melancia",
+      "preco": 7,
+      "img": "./src/img/logo.jpeg",
+      "categoria": "hortifruti"
+    },
+    {
+      "id": "29",
+      "nome": "cebola",
+      "preco": 3,
+      "img": "./src/img/logo.jpeg",
+      "categoria": "hortifruti"
+    },
+    {
+      "id": "30",
+      "nome": "cerveja artesanal",
+      "preco": 8,
+      "img": "./src/img/logo.jpeg",
+      "categoria": "adega"
+    },
+    {
+      "id": "31",
+      "nome": "vinho tinto",
+      "preco": 20,
+      "img": "./src/img/logo.jpeg",
+      "categoria": "adega"
+    },
+    {
+      "id": "32",
+      "nome": "vinho branco",
+      "preco": 18,
+      "img": "./src/img/logo.jpeg",
+      "categoria": "adega"
+    },
+    {
+      "id": "33",
+      "nome": "cerveja pilsen",
+      "preco": 5,
+      "img": "./src/img/logo.jpeg",
+      "categoria": "adega"
+    },
+    {
+      "id": "34",
+      "nome": "rum",
+      "preco": 25,
+      "img": "./src/img/logo.jpeg",
+      "categoria": "adega"
     }
   ],
   "cliente": [
@@ -64,7 +246,22 @@
       "endereco": "tal e tal e tal"
     }
   ],
-  "carrinho": [],
+  "carrinho": [
+    {
+      "id": "1",
+      "nome": "Arroz",
+      "preco": 7.5,
+      "img": "https://gbarbosa.vtexassets.com/arquivos/ids/210975-118-118?v=638354957020530000&width=118&height=118&aspect=true",
+      "categoria": "alimentos"
+    },
+    {
+      "id": "2",
+      "nome": "FEIJÃO",
+      "preco": 9,
+      "img": "./logo.jpeg",
+      "categoria": "alimentos"
+    }
+  ],
   "pedidos": [],
   "finalizados": []
 }

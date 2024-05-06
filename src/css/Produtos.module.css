@@ -26,6 +26,11 @@
     color: var(--principal);
 }
 
+.ativo{
+    display: flex;
+    background-color: green;
+}
+
 .navCategoria{
     display: flex;
     width: 100%;
@@ -51,12 +56,19 @@
 
 .navCategoria ul li:hover{
     background-color: var(--secundaria);
+    cursor: pointer;
 }
 
-.navCategoria ul li a{
+.navCategoria ul a{
     font-weight: bolder;
     text-decoration: none;
     color: #fff;
+}
+
+.navCategoria ul li svg{
+    color: #fff;
+    font-size: 22px;
+    vertical-align: middle;
 }
 
 .containerProdutos{
@@ -74,19 +86,20 @@
 }
 
 .containerCards{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
     width: 100%;
     padding: 2em 0 2em 0;
     margin: 0 auto;
 }
 
 .cardDiv{
-    width: 250px;
+    width: 95%;
     height: 300px;
-    border: 1px solid #eeeef1;
+    border: 1px solid #cbcbcf;
     position: relative;
+    margin: 0 auto;
+    margin-bottom: 15px;
 }
 
 .cardDiv div{
@@ -99,6 +112,7 @@
 
 .cardDiv div img{
     width: 100%;
+    height: 100%;
 }
 
 .cardDiv p{
@@ -111,10 +125,10 @@
 .cardDiv button{
     position: absolute;
     bottom: 10px;
-    left: 1%;
-    margin: 0 auto;
+    transform: translateX(-50%);
+    left: 50%;
     background-color: var(--principal);
-    width: 90px;
+    width: 95%;
     height: 40px;
     color: var(--fundo);
     border: none;
@@ -123,4 +137,5 @@
 .cardDiv button:hover{
     background-color: var(--secundaria);
     font-weight: bolder;
+    cursor: pointer;
 }
