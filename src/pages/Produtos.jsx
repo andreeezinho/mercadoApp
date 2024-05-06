@@ -3,11 +3,8 @@ import {useState, useEffect} from "react";
 import styles from "../css/Produtos.module.css";
 
 import {FaShoppingBasket} from "react-icons/fa";
-import {FaHandsWash} from "react-icons/fa"
-import {FaUtensils} from "react-icons/fa"
-import {FaBacon} from "react-icons/fa"
-import {FaAppleAlt} from "react-icons/fa"
-import {FaWineGlass} from "react-icons/fa"
+
+import NavCategoria from "../components/NavCategoria";
 
 function Produtos() {
     ///estado para armazenar os dados recebidos
@@ -90,14 +87,8 @@ function Produtos() {
                 <p>Adicione produtos no seu carrinho!</p>
             </div>
 
-            <div className={styles.navCategoria}>
-                <ul>
-                    <a href="#alimentos"><li><FaUtensils /> Alimentos</li></a>
-                    <a href="#higiene"><li><FaHandsWash /> Higiene</li></a>
-                    <a href="#acougue"><li><FaBacon /> Açougue</li></a>
-                    <a href="#hortifruti"><li><FaAppleAlt /> Hortifrut</li></a>
-                    <a href="#adega"><li><FaWineGlass /> Adega</li></a>
-                </ul>
+            <div id="navCategoria" className={styles.navCategoria}>
+                <NavCategoria />
             </div>
 
             <div className={styles.containerProdutos}>
@@ -111,7 +102,7 @@ function Produtos() {
                     dados.length > 0 ? (
                         dados.map((alimentos, indexAlimentos) => (
 
-                            // se categoria do produto for alimentos, gera a diva só de aliemtos
+                            // se categoria do produto for alimentos, gera a div só de alimentos
                             alimentos.categoria === "alimentos" ? (
                                 <div key={indexAlimentos} className={styles.cardDiv}>
                                     <div><img src={alimentos.img} alt="img" /></div>
@@ -139,7 +130,7 @@ function Produtos() {
                     dados.length > 0 ? (
                         dados.map((higiene, indexHigiene) => (
 
-                            // se categoria do produto for alimentos, gera a diva só de aliemtos
+                            // se categoria do produto for higiene, gera a div só de higiene
                             higiene.categoria === "higiene" ? (
                                 <div key={indexHigiene} className={styles.cardDiv}>
                                     <div><img src={higiene.img} alt="img" /></div>
@@ -165,7 +156,7 @@ function Produtos() {
                     dados.length > 0 ? (
                         dados.map((acougue, indexAcougue) => (
 
-                            // se categoria do produto for alimentos, gera a diva só de aliemtos
+                            // se categoria do produto for açogue, gera a div só de açogue
                             acougue.categoria === "açougue" ? (
                                 <div key={indexAcougue} className={styles.cardDiv}>
                                     <div><img src={acougue.img} alt="img" /></div>
@@ -191,7 +182,7 @@ function Produtos() {
                     dados.length > 0 ? (
                         dados.map((hortifruti, indexHortifruti) => (
 
-                            // se categoria do produto for alimentos, gera a diva só de aliemtos
+                            // se categoria do produto for hortifruti, gera a div só de hortifruti
                             hortifruti.categoria === "hortifruti" ? (
                                 <div key={indexHortifruti} className={styles.cardDiv}>
                                     <div><img src={hortifruti.img} alt="img" /></div>
@@ -209,6 +200,7 @@ function Produtos() {
             <div className={styles.containerProdutos}>
                 <div className={styles.categoria}>
                     <h1 id="adega">ADEGA</h1>
+                    <a href="#navCategoria">Voltar para o início</a>
                 </div>
                 
                 <div className={styles.containerCards}> 
@@ -217,7 +209,7 @@ function Produtos() {
                     dados.length > 0 ? (
                         dados.map((adega, indexAdega) => (
 
-                            // se categoria do produto for adega, gera a diva só de aliemtos
+                            // se categoria do produto for adega, gera a div só de adega
                             adega.categoria === "adega" ? (
                                 <div key={indexAdega} className={styles.cardDiv}>
                                     <div><img src={adega.img} alt="img" /></div>

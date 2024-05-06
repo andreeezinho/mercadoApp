@@ -6,6 +6,7 @@
     background-color: var(--principal);
     align-items: center;
     position: relative;
+    z-index: 1;
 }
 
 .nav div{
@@ -66,7 +67,7 @@
         box-shadow: -1px 0 10px #102672;
         background-color: var(--principal);
         display: none;
-        position: absolute;
+        position: fixed;
         right: 0;
         top: 0;
         height: 100vh;

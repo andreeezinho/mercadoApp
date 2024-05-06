@@ -26,15 +26,23 @@
     color: var(--principal);
 }
 
-.ativo{
+.containerProdutos{
     display: flex;
-    background-color: green;
+    flex-direction: column;
+}
+
+.categoria{
+    background-color: #eeeef1;
+}
+
+.categoria h1{
+    color: var(--principal);
+    margin-left: 1em;
 }
 
 .navCategoria{
     display: flex;
     width: 100%;
-    background-color: var(--principal);
     margin-bottom: 80px;
 }
 
@@ -43,6 +51,7 @@
     display: flex;
     list-style: none;
     margin: 0 auto;
+    background-color: var(--principal);
 }
 
 .navCategoria ul li{
@@ -69,20 +78,6 @@
     color: #fff;
     font-size: 22px;
     vertical-align: middle;
-}
-
-.containerProdutos{
-    display: flex;
-    flex-direction: column;
-}
-
-.categoria{
-    background-color: #eeeef1;
-}
-
-.categoria h1{
-    color: var(--principal);
-    margin-left: 1em;
 }
 
 .containerCards{
@@ -138,4 +133,67 @@
     background-color: var(--secundaria);
     font-weight: bolder;
     cursor: pointer;
+}
+
+@media(max-width: 1100px){
+    .containerCards{
+        grid-template-columns: repeat(4, 25%);
+    }
+}
+
+@media(max-width: 1100px){
+    .navCategoria ul li{
+        width: 120px;
+    }
+}
+
+@media(max-width: 880px){
+    .texto p{
+        font-size: 18px;
+    }
+    
+    .texto svg{
+        font-size: 26px;
+        margin-right: 10px;
+        color: var(--principal);
+    }
+
+    .categoria h1{
+        color: var(--principal);
+        margin-left: 1em;
+        font-size: 22px;
+    }
+
+    .navCategoria ul li{
+        width: 100px;
+        font-size: 14px;
+    }
+
+    .containerCards{
+        grid-template-columns: repeat(3, 33%);
+    }
+}
+
+@media(max-width: 650px){
+    .navCategoria ul li{
+        display: flex;
+        flex-direction: column;
+        width: 60px;
+        font-size: 10px;
+        align-items: center;
+    }
+
+    .categoria h1{
+        color: var(--principal);
+        margin-left: 1em;
+        font-size: 18px;
+    }
+
+    .navCategoria ul li svg{
+        margin-bottom: 5px;
+    }
+
+    .containerCards{
+        grid-template-columns: repeat(2, 50%);
+    }
 }
