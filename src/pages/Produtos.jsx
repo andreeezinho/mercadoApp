@@ -20,7 +20,7 @@ function Produtos() {
         const buscarDados = async () => {
             try{
                 ///fetch como requisição
-                const response = await fetch("http://localhost:5000/produtos", {
+                const response = await fetch("http://192.168.100.113:5000/produtos", {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -71,14 +71,6 @@ function Produtos() {
         }
 
     };
-
-    ////!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    ///
-    ///
-    /// ADICIONAR A BARRA DE CATEGORIA NO NAVBAR LATERAL DA TELA MOBILE
-    ///
-    ///
-    ///!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
     return(
         <div className={styles.container}>

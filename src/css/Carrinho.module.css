@@ -1,0 +1,119 @@
+@import "./root.module.css";
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.topTexto{
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    color: var(--principal);
+    padding: 1em 0 2em 0;
+}
+
+.topTexto svg{
+    font-size: 22px;
+    margin-right: 10px;
+}
+
+.topTexto h1{
+    font-size: 26px;
+}
+
+.containerCards{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.menuTabela{
+    background-color: #eeeef1;
+    margin-bottom: 2em;
+} 
+
+.menuTabela ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    justify-content: right;
+}
+
+.menuTabela li{
+    border: 1px solid black;
+}
+
+.menuTabela .produto{
+    width: 50%;
+}
+
+.menuTabela .preco{
+    text-align: right;
+    width: 20%;
+}
+
+.menuTabela .quantidade{
+    text-align: right;
+    width: 20%;
+}
+
+.divProduto{
+    display: flex;
+    background-color: #eeeef1;
+    border: 1px solid #bcbcbd;
+    border-left: none;
+    border-right: none;
+    align-items: center;
+    height: 150px;
+}
+
+.divProduto img{
+    width: 8%;
+    margin-right: 1.5%;
+}
+
+.divProduto .nome{
+    width: 50%;
+}
+
+.divProduto span{
+    text-align: right;
+    width: 20%;
+}
+
+.divProduto div{
+    position: relative;
+    width: 20%;
+}
+
+.divProduto div span{
+    padding: 0 2em 0 2em;
+}
+
+.divProduto div .btnQuant{
+    margin-left: 25%;
+}
+
+.divProduto div .remover{
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    right: 1em;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    vertical-align: super;
+    border: 1px solid #bcbcbd;
+    background-color: #cd3535;
+    color: #fff;
+}
+
+.divProduto div .remover:hover{
+    cursor: pointer;
+    border: 1px solid #cd3535;
+    background-color: transparent;
+    color: #cd3535;
+}

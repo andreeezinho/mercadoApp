@@ -1,4 +1,9 @@
-import {useState, useEffect} from "react"
+import {useState, useEffect} from "react";
+
+import styles from "../css/Carrinho.module.css";
+
+import {FaCartPlus} from "react-icons/fa";
+import {FaTrash} from "react-icons/fa";
 
 function Carrinho() {
     ///estado para armazenar os dados recebidos
@@ -14,7 +19,7 @@ function Carrinho() {
         const buscarDados = async () => {
             try{
                 ///fetch como requisição get
-                const response = await fetch("http://localhost:5000/carrinho", {
+                const response = await fetch("http://192.168.100.113:5000/carrinho", {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -70,26 +75,40 @@ function Carrinho() {
     }
 
     return(
-        <div>
-            {
-                ///se tiver um ou mais dados, ele mapeia a div que foi escrita
-                dados.length > 0 ? (
-                    dados.map((produto, index) => (
-                        <div key={index}>
-                            <img src={produto.img} alt="img" />
-                            <p>{produto.nome}</p>
-                            <p>{produto.preco}</p>
-                            <p>{produto.quantidade}</p>
-                            <button>++</button>
-                            {/* botao de remover produto */}
-                            <button onClick={() => removerProduto(produto.id)}>Remover</button> 
-                        </div>
-                    ))
-                ) : (
-                    <p>Não há nada no carrinho</p>
-                )
+        <div className={styles.container}>
+            <div className={styles.topTexto}><FaCartPlus /><h1>Seu carrinho de compras</h1></div>
 
-            }
+            <div className={styles.containerCards}>
+                <div className={styles.menuTabela}>
+                    <ul>
+                        <li className={styles.produto}>Produto</li>
+                        <li className={styles.preco}>Preço</li>
+                        <li className={styles.quantidade}>Quantidade</li>
+                    </ul>
+                </div>
+
+                {
+                    ///se tiver um ou mais dados, ele mapeia a div que foi escrita
+                    dados.length > 0 ? (
+                        dados.map((produto, index) => (
+                            <div key={index} className={styles.divProduto}>
+                                <img src={produto.img} alt="img" />
+                                <p className={styles.nome}>{produto.nome}</p>
+                                <span>R$ {produto.preco}</span>
+                                <div>
+                                    <button className={styles.btnQuant}>-1</button>
+                                    <span>{produto.quantidade}</span>
+                                    <button>+1</button>
+                                    {/* botao de remover produto */}
+                                    <button className={styles.remover} onClick={() => removerProduto(produto.id)}><FaTrash /></button>
+                                </div> 
+                            </div>
+                        ))
+                    ) : (
+                        <p>Não há nada no carrinho :/</p>
+                    )
+                }
+            </div>
         </div>
     )
 }

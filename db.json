@@ -5,7 +5,8 @@
       "nome": "Arroz",
       "preco": 7.5,
       "img": "https://gbarbosa.vtexassets.com/arquivos/ids/210975-118-118?v=638354957020530000&width=118&height=118&aspect=true",
-      "categoria": "alimentos"
+      "categoria": "alimentos",
+      "quantidade": 1
     },
     {
       "id": "2",
@@ -252,14 +253,40 @@
       "nome": "Arroz",
       "preco": 7.5,
       "img": "https://gbarbosa.vtexassets.com/arquivos/ids/210975-118-118?v=638354957020530000&width=118&height=118&aspect=true",
-      "categoria": "alimentos"
+      "categoria": "alimentos",
+      "quantidade": 1
     },
     {
       "id": "2",
       "nome": "FEIJÃO",
       "preco": 9,
       "img": "./logo.jpeg",
-      "categoria": "alimentos"
+      "categoria": "alimentos",
+      "quantidade": 1
+    },
+    {
+      "id": "3",
+      "nome": "macarrão",
+      "preco": 5,
+      "img": "./logo.jpeg",
+      "categoria": "alimentos",
+      "quantidade": 1
+    },
+    {
+      "id": "4",
+      "nome": "miojo",
+      "preco": 1.5,
+      "img": "./src/img/logo.jpeg",
+      "categoria": "alimentos",
+      "quantidade": 1
+    },
+    {
+      "id": "5",
+      "nome": "feijão preto",
+      "preco": 8,
+      "img": "./logo.jpeg",
+      "categoria": "alimentos",
+      "quantidade": 1
     }
   ],
   "pedidos": [],
