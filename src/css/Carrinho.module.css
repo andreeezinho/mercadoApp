@@ -62,7 +62,7 @@
 .divProduto{
     display: flex;
     background-color: #eeeef1;
-    border: 1px solid #bcbcbd;
+    border-top: 1px solid #bcbcbd;
     border-left: none;
     border-right: none;
     align-items: center;
@@ -70,6 +70,8 @@
 }
 
 .divProduto img{
+    background-color: #bcbcbd;
+    height: 90%;
     width: 8%;
     margin-right: 1.5%;
 }
@@ -161,4 +163,141 @@
     background-color: transparent;
     color: var(--principal);
     border: 1px solid var(--principal);
+}
+
+@media(max-width: 1150px){
+    .divProduto img{
+        height: 70%;
+    }    
+
+    .topTexto svg{
+        font-size: 20px;
+        margin-right: 10px;
+    }
+    
+    .topTexto h1{
+        font-size: 24px;
+    }
+    
+    .menuTabela .produto{
+        width: 50%;
+    }
+    
+    .menuTabela .preco{
+        width: 10%;
+    }
+    
+    .menuTabela .quantidade{
+        width: 30%;
+        text-align: center;
+    }
+
+    .divProduto .nome{
+        width: 50%;
+    }
+
+    .divProduto span{
+        width: 10%;
+    }
+
+    .divProduto div{
+        width: 30%;
+    }
+
+    .divProduto div span{
+        padding: 0 0.5em 0 0.5em;
+    }
+    
+    .divProduto div button{
+        width: 20px;
+        height: 20px;
+    }
+
+    .divProduto div .btnQuant{
+        margin-left: 40%
+    }
+    
+    .divProduto div .remover{
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media(max-width: 750px){
+    .divProduto img{
+        height: 65%;
+    }
+
+    .topTexto svg{
+        font-size: 16px;
+    }
+    
+    .topTexto h1{
+        font-size: 20px;
+    }
+
+    .menuTabela ul{
+        font-size: 14px;
+    }
+
+    .menuTabela .produto{
+        width: 45%;
+    }
+
+    .menuTabela .quantidade{
+        text-align: right;
+        width: 25%;
+    }
+
+    .divProduto{
+        font-size: 14px;
+    }
+
+    .divProduto img{
+        width: 20%;
+        margin: 0;
+    }
+
+    .divProduto div .btnQuant{
+        margin-left: 20%
+    }
+}
+
+@media(max-width: 550px){
+    .divProduto img{
+        height: 50%;
+    }
+
+    .menuTabela .produto{
+        width: 30%;
+    }
+
+    .menuTabela .preco{
+        width: 30%;
+    }
+
+    .menuTabela .quantidade{
+        text-align: center;
+        width: 35%;
+    }
+
+    .divProduto .nome{
+        width: 30%;
+    }
+
+    .divProduto span{
+        width: 15%;
+    }
+
+    .divProduto div{
+        width: 40%;
+    }
+
+    .divProduto div .btnQuant{
+        margin-left: 3em;
+    }
+
+    .divProduto div .remover{
+        right: 3px;
+    }
 }
