@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding-bottom: 5em;
 }
 
 .topTexto{
@@ -31,7 +32,6 @@
 
 .menuTabela{
     background-color: #eeeef1;
-    margin-bottom: 2em;
 } 
 
 .menuTabela ul{
@@ -40,10 +40,8 @@
     list-style: none;
     padding: 0;
     justify-content: right;
-}
-
-.menuTabela li{
-    border: 1px solid black;
+    font-size: 18px;
+    font-weight: bolder;
 }
 
 .menuTabela .produto{
@@ -58,6 +56,7 @@
 .menuTabela .quantidade{
     text-align: right;
     width: 20%;
+    padding-right: 5px;
 }
 
 .divProduto{
@@ -90,7 +89,21 @@
 }
 
 .divProduto div span{
-    padding: 0 2em 0 2em;
+    padding: 0 1em 0 1em;
+}
+
+.divProduto div button{
+    background-color: #bcbcbd;
+    border: none;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+}
+
+.divProduto div button:hover{
+    cursor: pointer;
+    background-color: #d1d1d1;
+    border: 1px solid #bcbcbd; 
 }
 
 .divProduto div .btnQuant{
@@ -116,4 +129,36 @@
     border: 1px solid #cd3535;
     background-color: transparent;
     color: #cd3535;
+}
+
+.mostrarPreco{
+    margin-top: 40px;
+}
+
+.confirmar{
+    display: flex;
+    padding: 1em 0 1em 0;
+    justify-content: right;
+    align-items: center;
+}
+
+.confirmar p{
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.confirmar button{
+    margin-right: 0;
+    padding: 1em 2em 1em 2em;
+    background-color: var(--principal);
+    color: #fff;
+    font-weight: bolder;
+    border: 1px solid #eeeef1;
+}
+
+.confirmar button:hover{
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--principal);
+    border: 1px solid var(--principal);
 }

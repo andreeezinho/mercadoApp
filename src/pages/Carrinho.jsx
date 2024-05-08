@@ -49,6 +49,34 @@ function Carrinho() {
 
     }, [])
 
+    const aumentaQuant = async(id) => {
+        ///filter() cria novo array "carrinho", filter vê todos os dados e retorna outro array com a condição especificada
+        dados.filter(produto => produto.id !== id)  ///condição: se o id for diferente dos outros 
+
+        var somarQuant = dados.some(produto => produto.quantidade = produto.quantidade + 1) 
+
+        setDados(somarQuant); //atualiza o estado dos dados para a nova array carrinho, que só vai ter os dados que nao foram apagados
+
+        try{
+            const response = await fetch(`http://localhost:5000/carrinho/${id}`, { ///dá o fetch no id específico
+                method: "POST", ///método de deletar
+                headers: {
+                    "Content-Type": "application/json"
+                },
+            });
+
+            //se der erro
+            if (!response.ok) {
+                setErro("Erro ao aumentar quantidade");
+                console.error("Erro na resposta: ", response.statusText);
+            }
+
+        }catch(error){ ///se der erro no try
+            setErro("Erro ao realizar a requisição para aumentar a quantidade do produto");
+            console.error("Erro na requisição: ", error);
+        } 
+    }
+
     const removerProduto = async(id) => {
             ///filter() cria novo array "carrinho", filter vê todos os dados e retorna outro array com a condição especificada
             const carrinho = dados.filter(produto => produto.id !== id); ///condição: se o id for diferente dos outros 
@@ -74,6 +102,10 @@ function Carrinho() {
             } 
     }
 
+    var somarTudo = dados.reduce((sum, produto) => {
+        return sum + (produto.preco * produto.quantidade)
+    }, 0)
+
     return(
         <div className={styles.container}>
             <div className={styles.topTexto}><FaCartPlus /><h1>Seu carrinho de compras</h1></div>
@@ -96,9 +128,9 @@ function Carrinho() {
                                 <p className={styles.nome}>{produto.nome}</p>
                                 <span>R$ {produto.preco}</span>
                                 <div>
-                                    <button className={styles.btnQuant}>-1</button>
+                                    <button className={styles.btnQuant} onClick={() => aumentaQuant(produto.quantidade)}>-</button>
                                     <span>{produto.quantidade}</span>
-                                    <button>+1</button>
+                                    <button>+</button>
                                     {/* botao de remover produto */}
                                     <button className={styles.remover} onClick={() => removerProduto(produto.id)}><FaTrash /></button>
                                 </div> 
@@ -108,6 +140,19 @@ function Carrinho() {
                         <p>Não há nada no carrinho :/</p>
                     )
                 }
+            </div>
+
+            <div className={`${styles.menuTabela} ${styles.mostrarPreco}`}>
+                    <ul>
+                        <li className={styles.produto}></li>
+                        <li className={styles.preco}>Total</li>
+                        <li className={styles.quantidade}>R$ {somarTudo}</li>
+                    </ul>
+            </div>
+
+            <div className={styles.confirmar}>
+                <p>Deseja finalizar a compra?</p>
+                <button>Finalizar</button>
             </div>
         </div>
     )
