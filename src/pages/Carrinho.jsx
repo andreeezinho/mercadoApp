@@ -102,9 +102,45 @@ function Carrinho() {
             } 
     }
 
+    ///somar preço total do carrinho
     var somarTudo = dados.reduce((sum, produto) => {
         return sum + (produto.preco * produto.quantidade)
     }, 0)
+
+    const [FormData, setFormData] = useState({
+        nome: '',
+        telefone: '',
+        endereço: ''
+    });
+
+    const handleChange = (e) => {
+        const {name, value} = e.target;
+        setFormData({
+            ...FormData,
+            [name]: value,
+        });
+    };
+
+    const enviarPedido = async (somarTudo) => {
+        try {
+            const response = await fetch("http://localhost:5000/pedidos", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },  
+                body: JSON.stringify({"precoTotal": somarTudo, "nome": FormData.nome, "telefone": FormData.telefone}),
+            });
+
+            if (!response.ok) {
+                setErro("Erro ao enviar o produto para os pedidos...");
+                console.error("Erro na resposta: ", response.statusText);
+            }
+        } catch (error) {
+            setErro("Erro na solicitação");
+            console.log("Erro na solicitação", error);
+        }
+
+    };
 
     return(
         <div className={styles.container}>
@@ -152,8 +188,19 @@ function Carrinho() {
 
             <div className={styles.confirmar}>
                 <p>Deseja finalizar a compra?</p>
-                <button>Finalizar</button>
+
+                <div className={styles.info}>
+                    <h2>Insiras suas informações para finalizar</h2>
+                    <form onSubmit={enviarPedido}>
+                        <input type="text" placeholder="Insira o seu nome" name="nome" value={FormData.nome} onChange={handleChange} required/>
+                        <input type="number" placeholder="Insira o seu telefone" name="telefone" value={FormData.telefone} onChange={handleChange} required />
+                    </form>
+                 </div>
+
+                <button onClick={() => enviarPedido(somarTudo)}>Finalizar</button>
             </div>
+
+            
         </div>
     )
 }

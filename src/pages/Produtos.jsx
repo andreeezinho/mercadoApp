@@ -90,7 +90,7 @@ function Produtos() {
 
                 <div className={styles.containerCards}>
                     {  
-                    ///renderiza os dados se tiver um ou mais
+                    ///renderiza os dados se tiver pelo menos um
                     dados.length > 0 ? (
                         dados.map((alimentos, indexAlimentos) => (
 
@@ -144,7 +144,7 @@ function Produtos() {
                 
                 <div className={styles.containerCards}> 
                     {  
-                    ///renderiza os dados se acougue tiver um ou mais
+                    ///renderiza os dados se acougue tiver pelo menos um
                     dados.length > 0 ? (
                         dados.map((acougue, indexAcougue) => (
 
@@ -170,7 +170,7 @@ function Produtos() {
                 
                 <div className={styles.containerCards}> 
                     {  
-                    ///renderiza os dados se hortifruti tiver um ou mais
+                    ///renderiza os dados se hortifruti tiver pelo menos um
                     dados.length > 0 ? (
                         dados.map((hortifruti, indexHortifruti) => (
 
@@ -197,7 +197,7 @@ function Produtos() {
                 
                 <div className={styles.containerCards}> 
                     {  
-                    ///renderiza os dados se adega tiver um ou mais
+                    ///renderiza os dados se adega tiver pelo menos um
                     dados.length > 0 ? (
                         dados.map((adega, indexAdega) => (
 
