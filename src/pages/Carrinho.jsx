@@ -12,6 +12,21 @@ function Carrinho() {
     ///estado para armazenar se der erro
     const [erro, setErro] = useState(null);
 
+    const [FormData, setFormData] = useState({
+        nome: '',
+        telefone: '',
+        endereco: ''
+    });
+
+    const handleChange = (e) => {
+        const {name, value} = e.target;
+        setFormData({
+            ...FormData,
+            [name]: value,
+        });
+    };
+
+
     //useEffect server para buscar os dados da api logo quando o componente(<Carrinho />) for carregado
     useEffect(() => {
 
@@ -49,32 +64,93 @@ function Carrinho() {
 
     }, [])
 
-    const aumentaQuant = async(id) => {
-        ///filter() cria novo array "carrinho", filter vê todos os dados e retorna outro array com a condição especificada
-        dados.filter(produto => produto.id !== id)  ///condição: se o id for diferente dos outros 
-
-        var somarQuant = dados.some(produto => produto.quantidade = produto.quantidade + 1) 
-
-        setDados(somarQuant); //atualiza o estado dos dados para a nova array carrinho, que só vai ter os dados que nao foram apagados
+    const aumentaQuant = async(id, quantidade) => {
+        const atualizaQuant = quantidade + 1;
 
         try{
             const response = await fetch(`http://localhost:5000/carrinho/${id}`, { ///dá o fetch no id específico
-                method: "POST", ///método de deletar
+                method: "PATCH", ///método de atualizar
                 headers: {
                     "Content-Type": "application/json"
                 },
+                body: JSON.stringify({quantidade: atualizaQuant})
             });
 
             //se der erro
             if (!response.ok) {
-                setErro("Erro ao aumentar quantidade");
-                console.error("Erro na resposta: ", response.statusText);
+                setErro("Erro em aumentar a quantidade");
+                console.error("Erro em aumentar a quantidade: ", response.statusText);
+            }
+        
+            if(response.ok){
+                const novosDados = dados.map(produto => {
+                    if(produto.id === id){
+                        return{...produto, quantidade: atualizaQuant}
+                    }
+
+                    return produto;
+                });
+
+                setDados(novosDados);
             }
 
         }catch(error){ ///se der erro no try
-            setErro("Erro ao realizar a requisição para aumentar a quantidade do produto");
+            setErro("Erro ao realizar a requisição para remover o produto do carrinho");
             console.error("Erro na requisição: ", error);
-        } 
+        }     
+    }
+
+    const reduzQuant = async(id, quantidade) => {
+        if(quantidade > 1){
+            const atualizaQuant = quantidade - 1;
+
+            try{
+                const response = await fetch(`http://localhost:5000/carrinho/${id}`, { ///dá o fetch no id específico
+                    method: "PATCH", ///método de atualizar
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({quantidade: atualizaQuant})
+                });
+    
+                //se der erro
+                if (!response.ok) {
+                    setErro("Erro em aumentar a quantidade");
+                    console.error("Erro em aumentar a quantidade: ", response.statusText);
+                }
+            
+                if(response.ok){
+                    const novosDados = dados.map(produto => {
+                        if(produto.id === id){
+                            return{...produto, quantidade: atualizaQuant}
+                        }
+    
+                        return produto;
+                    });
+    
+                    setDados(novosDados);
+                }
+    
+            }catch(error){ ///se der erro no try
+                setErro("Erro ao realizar a requisição para remover o produto do carrinho");
+                console.error("Erro na requisição: ", error);
+            } 
+        }
+
+            
+    }
+
+    ///somar preço total do carrinho
+    const somarTudo = () => {
+        if(dados.length === 0 || !Array.isArray(dados)){
+            return 0;
+        }
+
+        const soma = dados.reduce((total, produto) => {
+            return total + (produto.preco * produto.quantidade)
+        }, 0)
+
+        return soma;
     }
 
     const removerProduto = async(id) => {
@@ -102,25 +178,6 @@ function Carrinho() {
             } 
     }
 
-    ///somar preço total do carrinho
-    var somarTudo = dados.reduce((sum, produto) => {
-        return sum + (produto.preco * produto.quantidade)
-    }, 0)
-
-    const [FormData, setFormData] = useState({
-        nome: '',
-        telefone: '',
-        endereço: ''
-    });
-
-    const handleChange = (e) => {
-        const {name, value} = e.target;
-        setFormData({
-            ...FormData,
-            [name]: value,
-        });
-    };
-
     const enviarPedido = async (somarTudo) => {
         try {
             const response = await fetch("http://localhost:5000/pedidos", {
@@ -128,7 +185,7 @@ function Carrinho() {
                 headers: {
                     'Content-Type': 'application/json',
                 },  
-                body: JSON.stringify({"precoTotal": somarTudo, "nome": FormData.nome, "telefone": FormData.telefone}),
+                body: JSON.stringify({"precoTotal": somarTudo, "nome": FormData.nome, "telefone": FormData.telefone, "endereco": FormData.endereco}),
             });
 
             if (!response.ok) {
@@ -164,9 +221,9 @@ function Carrinho() {
                                 <p className={styles.nome}>{produto.nome}</p>
                                 <span>R$ {produto.preco}</span>
                                 <div>
-                                    <button className={styles.btnQuant} onClick={() => aumentaQuant(produto.quantidade)}>-</button>
+                                    <button className={styles.btnQuant} onClick={() => reduzQuant(produto.id, produto.quantidade)}>-</button>
                                     <span>{produto.quantidade}</span>
-                                    <button>+</button>
+                                    <button onClick={() => aumentaQuant(produto.id, produto.quantidade)}>+</button>
                                     {/* botao de remover produto */}
                                     <button className={styles.remover} onClick={() => removerProduto(produto.id)}><FaTrash /></button>
                                 </div> 
@@ -182,22 +239,21 @@ function Carrinho() {
                     <ul>
                         <li className={styles.produto}></li>
                         <li className={styles.preco}>Total</li>
-                        <li className={styles.quantidade}>R$ {somarTudo}</li>
+                        <li className={styles.quantidade}>R$ {somarTudo()}</li>
                     </ul>
             </div>
 
             <div className={styles.confirmar}>
-                <p>Deseja finalizar a compra?</p>
-
                 <div className={styles.info}>
                     <h2>Insiras suas informações para finalizar</h2>
                     <form onSubmit={enviarPedido}>
                         <input type="text" placeholder="Insira o seu nome" name="nome" value={FormData.nome} onChange={handleChange} required/>
                         <input type="number" placeholder="Insira o seu telefone" name="telefone" value={FormData.telefone} onChange={handleChange} required />
+                        <input type="text" placeholder="Insira o seu endereço" name="endereco" value={FormData.endereco} onChange={handleChange} required />
                     </form>
                  </div>
 
-                <button onClick={() => enviarPedido(somarTudo)}>Finalizar</button>
+                <button onClick={() => enviarPedido(somarTudo())}>Finalizar</button>
             </div>
 
             
