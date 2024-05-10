@@ -70,7 +70,6 @@
 }
 
 .divProduto img{
-    background-color: #bcbcbd;
     width: 8%;
     margin-right: 1.5%;
 }
@@ -143,13 +142,35 @@
     align-items: center;
 }
 
-.confirmar p{
-    margin-right: 10px;
-    font-size: 14px;
+.confirmar .info{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    justify-content: right;
 }
 
-.confirmar button{
-    margin-right: 0;
+.confirmar h2{
+    font-size: 16px;
+    color: var(--principal);
+}
+
+.confirmar .info form{
+    justify-self: right;
+}
+
+.confirmar .info input{
+    display: flex;
+    margin: 10px 0 10px 0;
+    height: 30px;
+    width: 95%;
+    background-color: transparent;
+    border: 1px solid var(--principal);
+    outline: 0;
+    padding: 10px 2.5%;
+}
+
+.confirmar .info button{
+    margin: 15px 0 0 0;
     padding: 1em 2em 1em 2em;
     background-color: var(--principal);
     color: #fff;
@@ -157,7 +178,7 @@
     border: 1px solid #eeeef1;
 }
 
-.confirmar button:hover{
+.confirmar .info button:hover{
     cursor: pointer;
     background-color: transparent;
     color: var(--principal);
@@ -286,5 +307,29 @@
 
     .divProduto div .remover{
         right: 3px;
+    }
+
+
+    .confirmar{
+        display: flex;
+        padding: 1em 0 1em 0;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .confirmar h2{
+        font-size: 14px;
+        color: var(--principal);
+    }
+    
+    .confirmar .info form{
+        text-align: center;
+    }
+    
+    .confirmar .info input{
+        height: 30px;
+        width: 95%;
+        padding: 10px 2.5%;
+        font-size: 12px;
     }
 }

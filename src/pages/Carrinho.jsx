@@ -1,4 +1,5 @@
 import {useState, useEffect} from "react";
+import { Link } from "react-router-dom"
 
 import styles from "../css/Carrinho.module.css";
 
@@ -12,12 +13,14 @@ function Carrinho() {
     ///estado para armazenar se der erro
     const [erro, setErro] = useState(null);
 
+    ///armazena dados do formulário de confirmação
     const [FormData, setFormData] = useState({
         nome: '',
         telefone: '',
         endereco: ''
     });
 
+    ///atualiza os valores dos inputs
     const handleChange = (e) => {
         const {name, value} = e.target;
         setFormData({
@@ -196,7 +199,6 @@ function Carrinho() {
             setErro("Erro na solicitação");
             console.log("Erro na solicitação", error);
         }
-
     };
 
     return(
@@ -213,7 +215,7 @@ function Carrinho() {
                 </div>
 
                 {
-                    ///se tiver um ou mais dados, ele mapeia a div que foi escrita
+                    ///se tiver um ou mais dados, ele redenriza os dados nessa div
                     dados.length > 0 ? (
                         dados.map((produto, index) => (
                             <div key={index} className={styles.divProduto}>
@@ -224,6 +226,7 @@ function Carrinho() {
                                     <button className={styles.btnQuant} onClick={() => reduzQuant(produto.id, produto.quantidade)}>-</button>
                                     <span>{produto.quantidade}</span>
                                     <button onClick={() => aumentaQuant(produto.id, produto.quantidade)}>+</button>
+                                    
                                     {/* botao de remover produto */}
                                     <button className={styles.remover} onClick={() => removerProduto(produto.id)}><FaTrash /></button>
                                 </div> 
@@ -236,24 +239,27 @@ function Carrinho() {
             </div>
 
             <div className={`${styles.menuTabela} ${styles.mostrarPreco}`}>
-                    <ul>
-                        <li className={styles.produto}></li>
-                        <li className={styles.preco}>Total</li>
-                        <li className={styles.quantidade}>R$ {somarTudo()}</li>
-                    </ul>
+                <ul>
+                    <li className={styles.produto}></li>
+                    <li className={styles.preco}>Total</li>
+                    <li className={styles.quantidade}>R$ {somarTudo()}</li>
+                </ul>
             </div>
 
             <div className={styles.confirmar}>
-                <div className={styles.info}>
-                    <h2>Insiras suas informações para finalizar</h2>
-                    <form onSubmit={enviarPedido}>
-                        <input type="text" placeholder="Insira o seu nome" name="nome" value={FormData.nome} onChange={handleChange} required/>
-                        <input type="number" placeholder="Insira o seu telefone" name="telefone" value={FormData.telefone} onChange={handleChange} required />
-                        <input type="text" placeholder="Insira o seu endereço" name="endereco" value={FormData.endereco} onChange={handleChange} required />
-                    </form>
-                 </div>
-
-                <button onClick={() => enviarPedido(somarTudo())}>Finalizar</button>
+                {
+                    dados.length > 0 ?(
+                        <div className={styles.info}>
+                            <h2>Insiras suas informações para finalizar</h2>
+                            <form onSubmit={enviarPedido}>
+                                <input type="text" placeholder="Insira o seu nome" name="nome" value={FormData.nome} onChange={handleChange} required/>
+                                <input type="number" placeholder="Insira o seu telefone" name="telefone" value={FormData.telefone} onChange={handleChange} required />
+                                <input type="text" placeholder="Insira o seu endereço (Rua, bairro, n°...)" name="endereco" value={FormData.endereco} onChange={handleChange} required />
+                                <Link to="/pedidos"><button onClick={() => enviarPedido(somarTudo())}>Finalizar</button></Link>
+                            </form>
+                        </div>
+                    ):(<></>)
+                }
             </div>
 
             

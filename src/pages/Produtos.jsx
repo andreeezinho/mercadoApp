@@ -53,7 +53,7 @@ function Produtos() {
 
     const enviarParaCarrinho = async (produto) => {
         try {
-            const response = await fetch("http://localhost:5000/carrinho", {
+            const response = await fetch("http://192.168.100.113:5000/carrinho", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

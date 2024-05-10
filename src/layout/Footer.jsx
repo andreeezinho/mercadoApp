@@ -16,7 +16,7 @@ var instagram = "https://www.instagram.com/comercialstephane";
 
 function Footer() {
     return(
-        <div className={styles.footer}>
+        <footer className={styles.footer}>
             <div className={styles.logo}>
                 <img src={img} alt="Logo" />
             </div>
@@ -54,7 +54,7 @@ function Footer() {
                 <p><span>&copy;</span>Copyright by <span>andreeezinho</span>, todos os direitos reservados.</p>
                 <p>Tucano, BA - 2024</p>
             </div>
-        </div>
+        </footer>
     )
 }
 

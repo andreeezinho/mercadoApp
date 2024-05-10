@@ -2,241 +2,178 @@
   "produtos": [
     {
       "id": "1",
-      "nome": "Arroz",
+      "nome": "Arroz Branco Butuí 1Kg",
       "preco": 7.5,
-      "img": "https://gbarbosa.vtexassets.com/arquivos/ids/210975-118-118?v=638354957020530000&width=118&height=118&aspect=true",
+      "img": "https://i.postimg.cc/5yGVtsz3/arroz-butui-1kg.png",
       "categoria": "alimentos",
       "quantidade": 1
     },
     {
       "id": "2",
-      "nome": "FEIJÃO",
+      "nome": "Feijão Carioca Camil 1kg",
       "preco": 9,
-      "img": "logo.jpeg",
+      "img": "https://i.postimg.cc/D0R9h8Vp/feijao-carioca-1kg.png",
       "categoria": "alimentos"
     },
     {
       "id": "3",
-      "nome": "macarrão",
+      "nome": "Bolacha Recheada Passatempo 130g",
       "preco": 5,
-      "img": "./logo.jpeg",
+      "img": "https://i.postimg.cc/yNXsTXq1/bolacha-passatempo-130g.png",
       "categoria": "alimentos"
     },
     {
       "id": "4",
-      "nome": "miojo",
+      "nome": "Miojo Nissin Galinha Caipíra 35g",
       "preco": 1.5,
-      "img": "./src/img/logo.jpeg",
+      "img": "https://i.postimg.cc/5tfZbhGJ/miojo-nissin80g.png",
       "categoria": "alimentos"
     },
     {
       "id": "5",
-      "nome": "feijão preto",
+      "nome": "Feijão Preto Máximo 1kg",
       "preco": 8,
-      "img": "./logo.jpeg",
-      "categoria": "alimentos"
-    },
-    {
-      "id": "6",
-      "nome": "macarrão integral",
-      "preco": 6,
-      "img": "./logo.jpeg",
-      "categoria": "alimentos"
-    },
-    {
-      "id": "7",
-      "nome": "carne bovina",
-      "preco": 15,
-      "img": "./src/img/logo.jpeg",
-      "categoria": "alimentos"
-    },
-    {
-      "id": "8",
-      "nome": "frango",
-      "preco": 10,
-      "img": "./src/img/logo.jpeg",
-      "categoria": "alimentos"
-    },
-    {
-      "id": "9",
-      "nome": "peixe",
-      "preco": 12,
-      "img": "./src/img/logo.jpeg",
-      "categoria": "alimentos"
-    },
-    {
-      "id": "10",
-      "nome": "feijão carioca",
-      "preco": 7,
-      "img": "./logo.jpeg",
+      "img": "https://i.postimg.cc/XNhSdDZK/feijaopreto-maximo-1kg.png",
       "categoria": "alimentos"
     },
     {
       "id": "11",
-      "nome": "sabonete",
+      "nome": "Sabonete Protex Macadâmia 85g",
       "preco": 2.5,
-      "img": "./src/img/logo.jpeg",
+      "img": "https://i.postimg.cc/DfWf9GLg/sabonete-protex-85g.png",
       "categoria": "higiene"
     },
     {
       "id": "12",
-      "nome": "shampoo",
+      "nome": "Creme Dental Colgate Sensitive 180g",
       "preco": 3.5,
-      "img": "./src/img/logo.jpeg",
+      "img": "https://i.postimg.cc/vmXCBPFV/cremedental-colgate-180g.png",
       "categoria": "higiene"
     },
     {
       "id": "13",
-      "nome": "papel-toalha",
+      "nome": "Absorvente Mili Sem Abas",
       "preco": 2.75,
-      "img": "./src/img/logo.jpeg",
+      "img": "https://i.postimg.cc/mg7sbNgY/absorvente-mili.png",
       "categoria": "higiene"
     },
     {
       "id": "14",
-      "nome": "sabonete líquido",
+      "nome": "Creme Dental Colgate Luminous White 150g",
       "preco": 1.5,
-      "img": "./src/img/logo.jpeg",
+      "img": "https://i.postimg.cc/TYD89qmz/cremedental-luminouswhite-150g.png",
       "categoria": "higiene"
     },
     {
       "id": "15",
-      "nome": "desinfetante",
+      "nome": "Desinfetante Pinho Bril Lavanda 500ml",
       "preco": 3,
-      "img": "./src/img/logo.jpeg",
-      "categoria": "higiene"
-    },
-    {
-      "id": "16",
-      "nome": "escova de dentes",
-      "preco": 2,
-      "img": "./src/img/logo.jpeg",
-      "categoria": "higiene"
-    },
-    {
-      "id": "17",
-      "nome": "pasta de dente",
-      "preco": 2.25,
-      "img": "./src/img/logo.jpeg",
-      "categoria": "higiene"
-    },
-    {
-      "id": "18",
-      "nome": "papel-higiênico",
-      "preco": 1.75,
-      "img": "./src/img/logo.jpeg",
-      "categoria": "higiene"
-    },
-    {
-      "id": "19",
-      "nome": "desodorante",
-      "preco": 4,
-      "img": "./src/img/logo.jpeg",
+      "img": "https://i.postimg.cc/26SRFsFG/desifetante-pinhobrilho-500ml.png",
       "categoria": "higiene"
     },
     {
       "id": "20",
-      "nome": "carne suína",
+      "nome": "Carne Suína 1Kg",
       "preco": 14,
-      "img": "./src/img/logo.jpeg",
+      "img": "https://i.postimg.cc/tRmyD4cx/carnesu-na.png",
       "categoria": "açougue"
     },
     {
       "id": "21",
-      "nome": "linguiça",
-      "preco": 9,
-      "img": "./src/img/logo.jpeg",
+      "nome": "Frango Inteiro Assado",
+      "preco": 35.5,
+      "img": "https://i.postimg.cc/RVKSFzPJ/frango.png",
       "categoria": "açougue"
     },
     {
       "id": "22",
-      "nome": "picanha",
-      "preco": 20,
-      "img": "./src/img/logo.jpeg",
+      "nome": "Picanha Kg",
+      "preco": 48,
+      "img": "https://i.postimg.cc/rmm3tSMY/picanha.png",
       "categoria": "açougue"
     },
     {
       "id": "23",
-      "nome": "salame",
-      "preco": 7,
-      "img": "./src/img/logo.jpeg",
+      "nome": "Acem Sem Osso Kg",
+      "preco": 42.7,
+      "img": "https://i.postimg.cc/W3NjYFjM/acem-semosso.png",
       "categoria": "açougue"
     },
     {
       "id": "24",
-      "nome": "presunto",
-      "preco": 8,
-      "img": "./src/img/logo.jpeg",
+      "nome": "Filé Mignon Kg",
+      "preco": 52.3,
+      "img": "https://i.postimg.cc/W3NjYFjM/acem-semosso.png",
       "categoria": "açougue"
     },
     {
       "id": "25",
-      "nome": "abacaxi",
-      "preco": 5,
-      "img": "./src/img/logo.jpeg",
+      "nome": "Acabaxi Unidade",
+      "preco": 6,
+      "img": "https://i.postimg.cc/XY5Vr6Qy/abacaxi-un.png",
       "categoria": "hortifruti"
     },
     {
       "id": "26",
-      "nome": "morango",
-      "preco": 6,
-      "img": "./src/img/logo.jpeg",
+      "nome": "Morango Kg",
+      "preco": 10.99,
+      "img": "https://i.postimg.cc/nV6VpL1t/morango-kg.png",
       "categoria": "hortifruti"
     },
     {
       "id": "27",
-      "nome": "kiwi",
-      "preco": 4,
-      "img": "./src/img/logo.jpeg",
+      "nome": "Kiwi Kg",
+      "preco": 30.99,
+      "img": "https://i.postimg.cc/dVPbSkjL/kiwi-kg.png",
       "categoria": "hortifruti"
     },
     {
       "id": "28",
-      "nome": "melancia",
-      "preco": 7,
-      "img": "./src/img/logo.jpeg",
+      "nome": "Melância Unidade",
+      "preco": 17.5,
+      "img": "https://i.postimg.cc/wMRrwgtX/melancia-kg.png",
       "categoria": "hortifruti"
     },
     {
       "id": "29",
-      "nome": "cebola",
-      "preco": 3,
-      "img": "./src/img/logo.jpeg",
+      "nome": "Cebola Kg",
+      "preco": 3.7,
+      "img": "https://i.postimg.cc/tg5G6qP7/cebola-kg.png",
       "categoria": "hortifruti"
     },
     {
       "id": "30",
-      "nome": "cerveja artesanal",
+      "nome": "Cerveja Brahma 350ml",
       "preco": 8,
-      "img": "./src/img/logo.jpeg",
+      "img": "https://i.postimg.cc/fyVG1YP0/cerveja-brahma-350ml.png",
       "categoria": "adega"
     },
     {
       "id": "31",
-      "nome": "vinho tinto",
+      "nome": "Cerveja Corona Extra 300ml",
       "preco": 20,
-      "img": "./src/img/logo.jpeg",
+      "img": "https://i.postimg.cc/rpcLz0Dv/cerveja-corona-300ml.png",
       "categoria": "adega"
     },
     {
       "id": "32",
-      "nome": "vinho branco",
+      "nome": "Cachaça 51 965ml",
       "preco": 18,
-      "img": "./src/img/logo.jpeg",
+      "img": "https://i.postimg.cc/HscmNCGP/cacha-a-51-965ml.png",
       "categoria": "adega"
     },
     {
       "id": "33",
-      "nome": "cerveja pilsen",
+      "nome": "Red Label 1L",
       "preco": 5,
-      "img": "./src/img/logo.jpeg",
+      "img": "https://i.postimg.cc/gJT5yn0c/redlabel-1-L.png",
       "categoria": "adega"
     },
     {
       "id": "34",
-      "nome": "rum",
+      "nome": "Cerveja Brahma Duplo-Malte 500ml",
       "preco": 25,
-      "img": "./src/img/logo.jpeg",
+      "img": "https://i.postimg.cc/NFLtY3KF/brahma-duplomalte-500ml.png",
       "categoria": "adega"
     }
   ],
@@ -247,24 +184,22 @@
       "endereco": "tal e tal e tal"
     }
   ],
-  "carrinho": [],
+  "carrinho": [
+    {
+      "id": "1",
+      "nome": "Arroz Branco Butuí 1Kg",
+      "preco": 7.5,
+      "img": "https://i.postimg.cc/5yGVtsz3/arroz-butui-1kg.png",
+      "categoria": "alimentos",
+      "quantidade": 1
+    }
+  ],
   "pedidos": [
     {
-      "id": "7a67",
-      "nome": "",
-      "telefone": ""
-    },
-    {
-      "id": "d137",
-      "precoTotal": 58.5,
-      "nome": "",
-      "telefone": ""
-    },
-    {
-      "id": "010d",
-      "precoTotal": 22.5,
-      "nome": "andre",
-      "telefone": "7575757",
+      "id": "a284",
+      "precoTotal": 15,
+      "nome": "andrezinho rl",
+      "telefone": "75991991991991",
       "endereco": "cafundé"
     }
   ],
